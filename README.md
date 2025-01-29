@@ -9,12 +9,12 @@
   - [Introduction](#intro)
   - [How to Read this Document](#howToRead)
   - [Learning Outcomes](#ILO)
-- **[Functional Specifications](A2_specs.htm)**
+- **[Functional Specifications](Document/A2_specs.md)**
   - [Overview](#overview)
   - [Commands](#commands)
   - [Printing Output](#print_output)
   - [Check Understanding](#check_understanding)
-- **[Communication Protocols](A2_coms.htm)**
+- **[Communication Protocols](Document/A2_coms.md)**
   - [Serial Communication](#serial_com)
     - [UART Protocol](#uart_overview)
     - [PC Implementation](#uart_PC)
@@ -25,12 +25,12 @@
 ---
 
 ### Architecture, Design & Synthesis
-- **[System Design](A2_design.htm)**
+- **[System Design](Document/A2_design.md)**
   - [UART Transmitter](#uart_tx)
   - [UART Receiver](#uart_rx)
   - [Command Processor](#cmd_&_dataProc)
   - [Data Processor](#dataProc_&_dataGen)
-- **[Vivado Guide](A2_vivado.htm)**
+- **[Vivado Guide](Document/A2_vivado.md)**
   - [Testing UART](#test_uart)
   - [Peak Detector](#peak_detector)
     - [System Synthesis](#fullSys_synth)
@@ -41,20 +41,20 @@
 ---
 
 ### Methodology
-- **[Group Work](A2_group.htm)**
+- **[Group Work](Document/A2_group.md)**
   - [Work Division](#work_division)
     - [Team Structure](#group_division)
     - [Task Allocation](#team_division)
     - [Common Pitfalls](#avoid_division)
   - [Effective Collaboration](#effective_group_work)
   - [Conflict Resolution](#team_difficulties)
-- **[Deliverables](A2_deliverables.htm)**
+- **[Deliverables](Document/A2_deliverables.md)**
   - [Interim Goals](#interim)
     - [Command Processor](#interim_cmd)
     - [Data Processor](#interim_data)
     - [Progress Report](#interim_report)
   - [Final Deadline](#final)
-- **[Design Approach](A2_design_approach.htm)**
+- **[Design Approach](Document/2_design_approach.md)**
   - [Modular Design](#modularity)
   - [Development Workflow](#start)
   - [Coding Style](#codeStyle)
@@ -63,6 +63,6 @@
 ---
 
 ## References
-- [All References](A2_refs.htm)
+- [All References](Document/A2_refs.md)
 
 ---
