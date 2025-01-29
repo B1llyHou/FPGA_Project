@@ -6,9 +6,9 @@
 
 ### Introduction to Assignment
 - **[Preamble](Document/A2_preamble.md)**
-  - [Introduction](#intro)
-  - [How to Read this Document](#howToRead)
-  - [Learning Outcomes](#ILO)
+  - [Introduction](Document/A2_preamble.md/#intro)
+  - [How to Read this Document](Document/A2_preamble.md/#howToRead)
+  - [Learning Outcomes](Document/A2_preamble.md/#ILO)
 - **[Functional Specifications](Document/A2_specs.md)**
   - [Overview](#overview)
   - [Commands](#commands)
