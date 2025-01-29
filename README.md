@@ -1,1 +1,68 @@
-# FPGA_Project
+# Digital Design Group Project 
+
+
+
+## Main Assignment
+
+### Introduction to Assignment
+- **[Preamble](A2_preamble.htm)**
+  - [Introduction](#intro)
+  - [How to Read this Document](#howToRead)
+  - [Learning Outcomes](#ILO)
+- **[Functional Specifications](A2_specs.htm)**
+  - [Overview](#overview)
+  - [Commands](#commands)
+  - [Printing Output](#print_output)
+  - [Check Understanding](#check_understanding)
+- **[Communication Protocols](A2_coms.htm)**
+  - [Serial Communication](#serial_com)
+    - [UART Protocol](#uart_overview)
+    - [PC Implementation](#uart_PC)
+    - [ASCII Control Sequences](#ASCII)
+  - [Asynchronous Signalling](#async)
+    - [Two-Phase Protocol](#twoPhase)
+
+---
+
+### Architecture, Design & Synthesis
+- **[System Design](A2_design.htm)**
+  - [UART Transmitter](#uart_tx)
+  - [UART Receiver](#uart_rx)
+  - [Command Processor](#cmd_&_dataProc)
+  - [Data Processor](#dataProc_&_dataGen)
+- **[Vivado Guide](A2_vivado.htm)**
+  - [Testing UART](#test_uart)
+  - [Peak Detector](#peak_detector)
+    - [System Synthesis](#fullSys_synth)
+    - [Full Simulation](#fullSys_sim)
+    - [Data Processor Sim](#dataProc_sim)
+    - [Command Processor Sim](#cmdProc_sim)
+
+---
+
+### Methodology
+- **[Group Work](A2_group.htm)**
+  - [Work Division](#work_division)
+    - [Team Structure](#group_division)
+    - [Task Allocation](#team_division)
+    - [Common Pitfalls](#avoid_division)
+  - [Effective Collaboration](#effective_group_work)
+  - [Conflict Resolution](#team_difficulties)
+- **[Deliverables](A2_deliverables.htm)**
+  - [Interim Goals](#interim)
+    - [Command Processor](#interim_cmd)
+    - [Data Processor](#interim_data)
+    - [Progress Report](#interim_report)
+  - [Final Deadline](#final)
+- **[Design Approach](A2_design_approach.htm)**
+  - [Modular Design](#modularity)
+  - [Development Workflow](#start)
+  - [Coding Style](#codeStyle)
+  - [Version Control](#vc)
+
+---
+
+## References
+- [All References](A2_refs.htm)
+
+---
