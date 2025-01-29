@@ -5,7 +5,7 @@
 ## Main Assignment
 
 ### Introduction to Assignment
-- **[Preamble](Document/A2_preamble.htm)**
+- **[Preamble](Document/A2_preamble.md)**
   - [Introduction](#intro)
   - [How to Read this Document](#howToRead)
   - [Learning Outcomes](#ILO)
