@@ -5,64 +5,64 @@
 ## Main Assignment
 
 ### Introduction to Assignment
-- **[Preamble](A2_preamble.htm)**
-  - [Introduction](#intro)
-  - [How to Read this Document](#howToRead)
-  - [Learning Outcomes](#ILO)
-- **[Functional Specifications](A2_specs.htm)**
-  - [Overview](#overview)
-  - [Commands](#commands)
-  - [Printing Output](#print_output)
-  - [Check Understanding](#check_understanding)
-- **[Communication Protocols](A2_coms.htm)**
-  - [Serial Communication](#serial_com)
-    - [UART Protocol](#uart_overview)
-    - [PC Implementation](#uart_PC)
-    - [ASCII Control Sequences](#ASCII)
-  - [Asynchronous Signalling](#async)
-    - [Two-Phase Protocol](#twoPhase)
+- **[Preamble](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/preamble.htm)**
+  - [Introduction](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/preamble.htm)
+  - [How to Read this Document](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/preamble.htm)
+  - [Learning Outcomes](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/preamble.htm)
+- **[Functional Specifications]([Document/A2_specs.md](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_specs.htm))**
+  - [Overview](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_specs.htm)
+  - [Commands](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_specs.htm)
+  - [Printing Output](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_specs.htm)
+  - [Check Understanding](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_specs.htm)
+- **[Communication Protocols](Document/A2_coms.md)**
+  - [Serial Communication](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_coms.htm)
+    - [UART Protocol](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_coms.htm)
+    - [PC Implementation](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_coms.htm)
+    - [ASCII Control Sequences](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_coms.htm)
+  - [Asynchronous Signalling](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_coms.htm)
+    - [Two-Phase Protocol](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_coms.htm)
 
 ---
 
 ### Architecture, Design & Synthesis
-- **[System Design](A2_design.htm)**
-  - [UART Transmitter](#uart_tx)
-  - [UART Receiver](#uart_rx)
-  - [Command Processor](#cmd_&_dataProc)
-  - [Data Processor](#dataProc_&_dataGen)
-- **[Vivado Guide](A2_vivado.htm)**
-  - [Testing UART](#test_uart)
-  - [Peak Detector](#peak_detector)
-    - [System Synthesis](#fullSys_synth)
-    - [Full Simulation](#fullSys_sim)
-    - [Data Processor Sim](#dataProc_sim)
-    - [Command Processor Sim](#cmdProc_sim)
+- **[System Design](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design.htm)**
+  - [UART Transmitter](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design.htm)
+  - [UART Receiver](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design.htm)
+  - [Command Processor](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design.htm)
+  - [Data Processor](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design.htm)
+- **[Vivado Guide](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_vivado.htm)**
+  - [Testing UART](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_vivado.htm)
+  - [Peak Detector](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_vivado.htm)
+    - [System Synthesis](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_vivado.htm)
+    - [Full Simulation](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_vivado.htm)
+    - [Data Processor Sim](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_vivado.htm)
+    - [Command Processor Sim](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_vivado.htm)
 
 ---
 
 ### Methodology
-- **[Group Work](A2_group.htm)**
-  - [Work Division](#work_division)
-    - [Team Structure](#group_division)
-    - [Task Allocation](#team_division)
-    - [Common Pitfalls](#avoid_division)
-  - [Effective Collaboration](#effective_group_work)
-  - [Conflict Resolution](#team_difficulties)
-- **[Deliverables](A2_deliverables.htm)**
-  - [Interim Goals](#interim)
-    - [Command Processor](#interim_cmd)
-    - [Data Processor](#interim_data)
-    - [Progress Report](#interim_report)
-  - [Final Deadline](#final)
-- **[Design Approach](A2_design_approach.htm)**
-  - [Modular Design](#modularity)
-  - [Development Workflow](#start)
-  - [Coding Style](#codeStyle)
-  - [Version Control](#vc)
+- **[Group Work](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_group.htm)**
+  - [Work Division](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_group.htm)
+    - [Team Structure](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_group.htm)
+    - [Task Allocation](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_group.htm)
+    - [Common Pitfalls](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_group.htm)
+  - [Effective Collaboration](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_group.htm)
+  - [Conflict Resolution](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_group.htm)
+- **[Deliverables](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_deliverables.htm)**
+  - [Interim Goals](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_deliverables.htm)
+    - [Command Processor](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_deliverables.htm)
+    - [Data Processor](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_deliverables.htm)
+    - [Progress Report](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_deliverables.htm)
+  - [Final Deadline](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_deliverables.htm)
+- **[Design Approach](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design_approach.htm)**
+  - [Modular Design](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design_approach.htm)
+  - [Development Workflow](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design_approach.htm)
+  - [Coding Style](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design_approach.htm)
+  - [Version Control](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design_approach.htm)
 
 ---
 
 ## References
-- [All References](A2_refs.htm)
+- [All References](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design_approach.htm)
 
 ---
