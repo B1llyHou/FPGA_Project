@@ -65,4 +65,6 @@
 ## References
 - [All References](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design_approach.htm)
 
+![image](https://github.com/user-attachments/assets/bf5ece42-9fba-4ccb-84c2-a3cbba6e9c59)
+
 ---
