@@ -75,7 +75,7 @@
 - [All References](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design_approach.htm)
 
 ---
-## Time Table
+## Timetable
 ![image](https://github.com/user-attachments/assets/bf5ece42-9fba-4ccb-84c2-a3cbba6e9c59)
 
 ---
