@@ -1,6 +1,6 @@
 # Digital Design Group Project 
 
-## Collaborators(Group 18):
+## Collaborators (Group 18):
 #### Data processing group
 - Kwon	Yihyun     wu23001@bristol.ac.uk
 - Norris	Kristian qe23270@bristol.ac.uk
@@ -9,7 +9,7 @@
 - John	Daniel ew22506@bristol.ac.uk
 - Li	Eric wp22513@bristol.ac.uk
 
-
+---
 
 ## Main Assignment
 
