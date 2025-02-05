@@ -1,5 +1,14 @@
 # Digital Design Group Project 
 
+## Collaborators(Group 18):
+#### Data processing group
+- Kwon	Yihyun     wu23001@bristol.ac.uk
+- Norris	Kristian qe23270@bristol.ac.uk
+#### Command processing group
+- Billy Hou        vx21242@bristol.ac.uk
+- John	Daniel ew22506@bristol.ac.uk
+- Li	Eric wp22513@bristol.ac.uk
+
 
 
 ## Main Assignment
@@ -65,6 +74,8 @@
 ## References
 - [All References](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design_approach.htm)
 
+---
+## Time Table
 ![image](https://github.com/user-attachments/assets/bf5ece42-9fba-4ccb-84c2-a3cbba6e9c59)
 
 ---
