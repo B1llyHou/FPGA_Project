@@ -73,7 +73,21 @@ The simplified `cmdProc` module handles basic UART communication and command det
 *（Output shows correct response: `FD 197`）*
 
 ---
+### Simulation Log (Excerpt)
 
+```txt
+Note: Start test cmdProc now...
+Note: Test 'L' command start... Please be patient!
+Note: TX Data: 76 (ASCII: 'L')
+Note: We found L command characters in response! Success!!!
+...
+Note: Test 'P' command now... Please be patient!
+Note: TX Data: 80 (ASCII: 'P')
+Note: We found P command response has correct characters! Success!!!
+...
+Note: TEST DONE: cmdProc handle 'L' and 'P' commands correct! Well done!
+```
+---
 ## Conclusion
 
 The simplified `cmdProc` satisfies all requirements given by Professor Pamunuwa for the reduced range assignment.  
