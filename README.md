@@ -1,14 +1,18 @@
 # Digital Design Group Project 
 
-## Collaborators (Group 18):
-#### Data processing group
-- Kwon	Yihyun     wu23001@bristol.ac.uk
-- Norris	Kristian qe23270@bristol.ac.uk
-#### Command processing group
-- Billy Hou        vx21242@bristol.ac.uk
-- John	Daniel ew22506@bristol.ac.uk
-- Li	Eric wp22513@bristol.ac.uk
+## Team Members
 
+### Command Processor - UART Communication
+- **Billy Hou** (vx21242@bristol.ac.uk)
+
+### Data Processor - Full Specification
+- **Kwon Yihyun** (wu23001@bristol.ac.uk)
+- **Norris Kristian** (qe23270@bristol.ac.uk)
+
+## Task Division
+Due to the drop of two group members, Professor Dinesh Pamunuwa has assigned a modified task division:
+- **Billy** is responsible for implementing a synthesizable UART communication module in the Command Processor.
+- **Kristian and Yihyun** will complete the Data Processor according to full specifications and test it using the black-box Command Processor.
 ---
 
 ## Main Assignment
