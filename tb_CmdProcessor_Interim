@@ -79,6 +79,8 @@ architecture testbench of tb_cmdProc_interim is
   -- We control the signal directly to cmdProc and we do not need to receive the data through UART,
   -- so this component is redundant in direct testing.
   -- Removing it simplifies the test environment for now.
+  -- 隐藏UART_RX_CTRL的组件声明。我们直接发给cmdProc信号，无需通过UART接收，
+  --  暂时性隐藏，为防止意外情况需要简化当前测试环境。这个地方未来集成需要修改。
   ----------------------------------------------------------------------------
   --  component UART_RX_CTRL is
   --    port(
@@ -249,8 +251,8 @@ architecture testbench of tb_cmdProc_interim is
   ----------------------------------------------------------------------------
   -- Adding Other signals needed but not directly used in current 'L'and'P' command testing
   ----------------------------------------------------------------------------
-  signal test_numWords_bcd: BCD_ARRAY_TYPE(2 downto 0);               -- This signal captures the BCD representation of word count output by cmdProc.
-                                                                      -- Not actively used in command testing, but need to connect for complete behavior.（不积极用于命令测试，但仍需连接完整行为）
+  signal test_numWords_bcd: BCD_ARRAY_TYPE(2 downto 0);               -- This signal captures the BCD representation of word count output by cmdProc.(信号接收了cmdProc输出的BCD编码字数)
+                                                                      -- Not actively used in command testing, but need to connect for complete behavior.（简化测试不检查这个信号的值，但是要满足cmdProc组件的端口连接要求就必须连接）
 
 
 
@@ -258,6 +260,8 @@ architecture testbench of tb_cmdProc_interim is
   -- Unused signals for unused interfaces 
   -- These signals will simulate the dataConsume component
   -- outputs without needing the actual component for the current focused testing of cmdProc.
+  -- 模拟未使用接口的信号。因为暂时无法与dataConsume组件集成得到输出，
+  --  dataConsume组件暂时不用实例化。
   ----------------------------------------------------------------------------
   signal unused_dataReady: std_logic := '0';                           -- This signal indicates data ready status. Initialized to '0'.
                                                                       -- In original design, dataConsume module drives this signal when data available.
@@ -288,21 +292,21 @@ architecture testbench of tb_cmdProc_interim is
 -- ASCII constants for 'L' and 'P' commands testing
 -- Using constant names instead of hex values directly, then we can read it clearly.
 ----------------------------------------------------------------------------
-constant ASCII_L: std_logic_vector(7 downto 0) := x"4C";  -- 'L'
+constant ASCII_L: std_logic_vector(7 downto 0) := x"4C";  -- 'L'(ASCII)
                                                           -- For sending 'L' command to cmdProc.
-constant ASCII_0: std_logic_vector(7 downto 0) := x"30";  -- '0'
+constant ASCII_0: std_logic_vector(7 downto 0) := x"30";  -- '0'(ASCII)
                                                           -- Check if response have '0' in it.
-constant ASCII_9: std_logic_vector(7 downto 0) := x"39";  -- '9'
+constant ASCII_9: std_logic_vector(7 downto 0) := x"39";  -- '9'(ASCII)
                                                           -- Need for find '9' in response.
-constant ASCII_F: std_logic_vector(7 downto 0) := x"46";  -- 'F'
+constant ASCII_F: std_logic_vector(7 downto 0) := x"46";  -- 'F'(ASCII)
                                                           -- Must check if 'F' appears in responses.
-constant ASCII_A: std_logic_vector(7 downto 0) := x"41";  -- 'A'
+constant ASCII_A: std_logic_vector(7 downto 0) := x"41";  -- 'A'(ASCII)
                                                           -- Look for 'A' in results to verify.
-constant ASCII_D: std_logic_vector(7 downto 0) := x"44";  -- 'D'
+constant ASCII_D: std_logic_vector(7 downto 0) := x"44";  -- 'D'(ASCII)
                                                           -- 'D' character important for check.
-constant ASCII_P: std_logic_vector(7 downto 0) := x"50";  -- 'P'
+constant ASCII_P: std_logic_vector(7 downto 0) := x"50";  -- 'P'(ASCII)
                                                           -- For sending 'P' command in test.
-constant ASCII_1: std_logic_vector(7 downto 0) := x"31";  -- '1'
+constant ASCII_1: std_logic_vector(7 downto 0) := x"31";  -- '1'(ASCII)
                                                           -- Check the response if contain '1'.
 
 
@@ -319,7 +323,7 @@ begin
 -- Our test only need simple reset at beginning.
 
 ----------------------------------------------------------------------------
--- reset <= '0', '1' after 2 ns, '0' after 15 ns, '0' after 3600 ns, '0' after 3615 ns; -- 暂时不用，待完成所有功能实现
+-- reset <= '0', '1' after 2 ns, '0' after 15 ns, '0' after 3600 ns, '0' after 3615 ns;
 
 ----------------------------------------------------------------------------
 -- Hide byte counter process used for track data process
@@ -378,7 +382,7 @@ begin
 -- Hide complex UART bit timing simulation. 
 -- We not need bit-level UART for current test.
 -- when test cmdProc directly with high level commands.
--- 原始的testbench里使用了位级UART信号模拟，我们目前不依赖于dataGen和dataConsume组件，直接向cmdProc输入高级命令。
+-- 原始的testbench里使用了位级UART信号模拟，我们目前不依赖于dataGen和dataConsume组件，通过直接向cmdProc输入高级命令就可以得到验证。
 ----------------------------------------------------------------------------
 --  -- issue first read cmd a012
 ----------------------------------------------------------------------------
@@ -497,6 +501,9 @@ begin
 -- This is the core of ModifiedTestbench:
 -- test cmdProc alone for better test with direct 
 -- control inputs and check the outputs.
+--  只实例化cmdProc组件，将端口直接连接到测试信号。
+--  Modified_Testbench的核心target，单独测试cmdProc，
+--  直接控制输入然后检查输出来进行测试。
 ----------------------------------------------------------------------------
 dut: cmdProc
 port map (
@@ -601,7 +608,7 @@ end process;
 -- This process make easy test of commands we need.
 -- More easy to understand than original UART test with many complex parts.
 ----------------------------------------------------------------------------
-test_process: process
+test_process: process  -- maintest激励进程
 begin
   -- Wait reset finish first
   wait for 20 us;
