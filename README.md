@@ -60,7 +60,7 @@ The simplified `cmdProc` module handles basic UART communication and command det
 | `txdone`       | input         | 1 bit     | High when UART TX is ready for next byte                       |
 
 
-## ✅ Simulation Results
+## Simulation Results
 
 ### `L` / `l` Command
 ![List Command Output](https://github.com/user-attachments/assets/8330f5be-33df-4bf6-a7a3-a154c641f943)  
