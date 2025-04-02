@@ -36,15 +36,15 @@ architecture test of tb_peakDetection is
 		);
 	end component;
 
-	signal clk         : std_logic := '0';
-	signal reset       : std_logic := '0';
-	signal byte        : std_logic_vector(7 downto 0) := (others => '0');
-	signal dataReady   : std_logic := '0';
-	signal start       : std_logic := '0';
-	signal done        : std_logic := '0';
-	signal dataResults : CHAR_ARRAY_TYPE(0 to 6);
-	signal maxIndex    : BCD_ARRAY_TYPE(2 downto 0);
-	signal seqDone     : std_logic;
+	signal clk: std_logic := '0';
+	signal reset: std_logic := '0';
+	signal byte: std_logic_vector(7 downto 0) := (others => '0');
+	signal dataReady: std_logic := '0';
+	signal start: std_logic := '0';
+	signal done: std_logic := '0';
+	signal dataResults: CHAR_ARRAY_TYPE(0 to 6);
+	signal maxIndex: BCD_ARRAY_TYPE(2 downto 0);
+	signal seqDone: std_logic;
 	
 	signal cycleCount: integer := 0;
 	constant maxCycleCount : integer := 100;
