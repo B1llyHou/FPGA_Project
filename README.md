@@ -1,68 +1,79 @@
-# Digital Design Group Project 
+README 
 
+These files implement the data processor of the peak detector system using VHDL. The data processor is designed to retrieve a sequence of bytes and detect the greatest byte in the sequence. Each component of the data processor is implemented as a seperate VHDL module, with corresponding testbenches to verify functionality of each module through simulation.
 
+-----------------------------------------------------------------
 
-## Main Assignment
+Files included in the data processor implementation:
 
-### Introduction to Assignment
-- **[Preamble](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/preamble.htm)**
-  - [Introduction](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/preamble.htm)
-  - [How to Read this Document](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/preamble.htm)
-  - [Learning Outcomes](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/preamble.htm)
-- **[Functional Specifications]([Document/A2_specs.md](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_specs.htm))**
-  - [Overview](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_specs.htm)
-  - [Commands](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_specs.htm)
-  - [Printing Output](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_specs.htm)
-  - [Check Understanding](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_specs.htm)
-- **[Communication Protocols](Document/A2_coms.md)**
-  - [Serial Communication](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_coms.htm)
-    - [UART Protocol](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_coms.htm)
-    - [PC Implementation](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_coms.htm)
-    - [ASCII Control Sequences](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_coms.htm)
-  - [Asynchronous Signalling](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_coms.htm)
-    - [Two-Phase Protocol](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_coms.htm)
+1) dataConsume.vhd
+The top-level module that controls and instantiates dataRetrieval.vhd and peakDetection.vhd.
 
----
+2) dataRetrieval.vhd
+A submodule of dataConsume that controls the retrieval of a defined number of data bytes from the data generator using a two-phase handshaking protocol.
 
-### Architecture, Design & Synthesis
-- **[System Design](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design.htm)**
-  - [UART Transmitter](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design.htm)
-  - [UART Receiver](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design.htm)
-  - [Command Processor](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design.htm)
-  - [Data Processor](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design.htm)
-- **[Vivado Guide](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_vivado.htm)**
-  - [Testing UART](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_vivado.htm)
-  - [Peak Detector](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_vivado.htm)
-    - [System Synthesis](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_vivado.htm)
-    - [Full Simulation](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_vivado.htm)
-    - [Data Processor Sim](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_vivado.htm)
-    - [Command Processor Sim](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_vivado.htm)
+3) peakDetection.vhd
+A submodule of dataConsume that performs peak detection on the sequence of bytes retrieved by dataRetrieval.vhd. Following the processin of all bytes, the output sequence is formatted and output.
 
----
+4) bcd_integer_conversion.vhd
+A package that provides conversion function between integer values and BCD values.
 
-### Methodology
-- **[Group Work](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_group.htm)**
-  - [Work Division](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_group.htm)
-    - [Team Structure](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_group.htm)
-    - [Task Allocation](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_group.htm)
-    - [Common Pitfalls](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_group.htm)
-  - [Effective Collaboration](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_group.htm)
-  - [Conflict Resolution](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_group.htm)
-- **[Deliverables](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_deliverables.htm)**
-  - [Interim Goals](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_deliverables.htm)
-    - [Command Processor](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_deliverables.htm)
-    - [Data Processor](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_deliverables.htm)
-    - [Progress Report](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_deliverables.htm)
-  - [Final Deadline](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_deliverables.htm)
-- **[Design Approach](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design_approach.htm)**
-  - [Modular Design](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design_approach.htm)
-  - [Development Workflow](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design_approach.htm)
-  - [Coding Style](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design_approach.htm)
-  - [Version Control](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design_approach.htm)
+5) tb_dataRetrieval.vhd
+A testbench to verify the functionality of dataRetrieval.vhd through simulation.
 
----
+6) tb_peakDetection.vhd
+A testbench to verify the functionality of peakDetection.vhd through simulation.
 
-## References
-- [All References](https://seis.bristol.ac.uk/~sy13201/digital_design/ECAD/A2_design_approach.htm)
+7) tb_bcd_integer_conversion.vhd
+A testbench to verify the functionality of bcd_integer_conversion.vhd through simulation.
 
----
+-----------------------------------------------------------------
+
+How to test the functionality of the system with testbenches:
+
+To test dataRetrieval.vhd, required files:
+
+	- dataRetrieval.vhd
+	- common_pack.vhd			[supplied file]
+	- tb_dataRetrieval.vhd
+	
+To test peakDetection.vhd, required files:
+
+	- peakDetection.vhd
+	- bcd_integer_conversion.vhd
+	- common_pack.vhd			[supplied file]
+	- tb_peakDetection.vhd
+	
+To test bcd_integer_conversion.vhd, required files:
+
+	- bcd_integer_conversion.vhd
+	- common_pack.vhd			[supplied file]
+	- tb_bcd_integer_conversion.vhd
+	
+To test the entire data processor's functionality, required files:
+
+	- dataConsume.vhd
+	- dataRetrieval.vhd
+	- peakDetection.vhd
+	- bcd_integer_conversion.vhd
+	- common_pack.vhd			[supplied file]
+	- dataGen.vhd				[supplied file]
+	- tb_dataConsume_signed.vhd	[supplied file]
+	
+To test the entire peak detector's functionality, required files:
+
+	- dataConsume.vhd
+	- dataRetrieval.vhd
+	- peakDetection.vhd
+	- bcd_integer_conversion.vhd
+	- common_pack.vhd			[supplied file]
+	- dataGen.vhd				[supplied file]
+	- tb_dataConsume_signed.vhd	[supplied file]
+	- UART_RX_CTRL.vhd			[supplied file]
+	- UART_TX_CTRL.vhd			[supplied file]
+	- cmdProc_wrapper.vhd		[supplied file]
+	- cmdProv_synthesised.vhd	[supplied file]
+	
+-----------------------------------------------------------------
+
+Synthesis:
